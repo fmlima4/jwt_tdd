@@ -1,4 +1,8 @@
 const routes = require('express').Router();
-const {User} = require('./app/models');
+const SessionsController = require('./app/controllers/SessionsController');
+
+routes.post('/sessions', SessionsController.store);
+
+
 
 module.exports = routes;
